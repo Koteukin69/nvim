@@ -529,6 +529,6 @@ return {
       { "<C-Space>", "<cmd>ToggleTerm<cr>", desc = "Terminal" },
       { "<Nul>", "<cmd>ToggleTerm<cr>", desc = "Terminal" },
     },
-    opts = { direction = "float", open_mapping = [[<C-Space>]] },
+    opts = { direction = "float", open_mapping = { [[<C-Space>]], [[<Nul>]] } },
   },
 }
