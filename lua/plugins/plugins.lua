@@ -78,6 +78,14 @@ return {
           silent = true,
           nowait = true,
         })
+
+        vim.keymap.set("n", "e", "<C-w>p", {
+          buffer = bufnr,
+          desc = "Focus previous window",
+          noremap = true,
+          silent = true,
+          nowait = true,
+        })
       end,
       view = { width = 35 },
       renderer = { group_empty = true },
