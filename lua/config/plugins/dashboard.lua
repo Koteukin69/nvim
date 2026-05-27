@@ -33,10 +33,9 @@ function M.setup()
     dashboard.button("f", "Find File", "<cmd>Telescope find_files<cr>"),
     dashboard.button("n", "New File", "<cmd>ene <bar> startinsert<cr>"),
     dashboard.button("R", "Projects", "<cmd>ProjectOpen<cr>"),
-    dashboard.button("g", "Find Text", "<cmd>Telescope live_grep<cr>"),
     dashboard.button("r", "Recent Files", "<cmd>Telescope oldfiles<cr>"),
     dashboard.button("s", "Restore Session", "<cmd>lua require('persistence').load()<cr>"),
-    dashboard.button("q", "Quit", "<cmd>qa<cr>"),
+    dashboard.button("q", "Quit", "<cmd>qa!<cr>"),
   }
 
   dashboard.opts.opts = dashboard.opts.opts or {}
