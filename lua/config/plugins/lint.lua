@@ -5,7 +5,7 @@ function M.setup()
   lint.linters_by_ft = {
     python = { "ruff" },
     sh = { "shellcheck" },
-    markdown = { "markdownlint" },
+    -- markdown = { "markdownlint" },
   }
 
   vim.api.nvim_create_autocmd({ "BufWritePost", "InsertLeave" }, {
