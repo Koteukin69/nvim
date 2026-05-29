@@ -23,6 +23,20 @@ function M.opts()
         nowait = true,
       })
 
+      vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>", {
+        buffer = bufnr,
+        desc = "Next buffer",
+        noremap = true,
+        silent = true,
+      })
+
+      vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>", {
+        buffer = bufnr,
+        desc = "Previous buffer",
+        noremap = true,
+        silent = true,
+      })
+
       vim.keymap.set("n", "e", "<C-w>p", {
         buffer = bufnr,
         desc = "Focus previous window",
