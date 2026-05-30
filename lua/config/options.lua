@@ -9,5 +9,5 @@ vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-vim.opt.mouse = ""
+vim.opt.mouse = "a"
 
