@@ -43,7 +43,8 @@ return {
 
   {
     "neovim/nvim-lspconfig",
-    version = "v2.5.0",
+    version = "v1.8.0",
+    pin = true,
     dependencies = {
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
