@@ -101,4 +101,25 @@ return {
     },
   },
 
+  {
+    dir = "/data/plugins/projects.nvim",
+    name = "projects",
+    config = function()
+      require("projects").setup()
+    end,
+  },
+  -- {
+  -- dir = "/data/plugins/macros.nvim",
+  -- name = "macros",
+  -- config = function()
+  -- require("macros").setup()
+  -- end,
+  -- },
+  {
+    dir = "/data/plugins/lang.nvim",
+    name = "lang",
+    config = function()
+      require("lang").setup()
+    end,
+  },
 }
