@@ -8,7 +8,7 @@ treesitter.setup({
   install_dir = vim.fn.stdpath("data") .. "/site",
 })
 
-treesitter.install({
+local languages = {
   "lua",
   "vim",
   "vimdoc",
@@ -24,7 +24,10 @@ treesitter.install({
   "html",
   "css",
   "c_sharp",
-})
+  "prisma",
+}
+
+treesitter.install(languages)
 
 vim.api.nvim_create_autocmd("FileType", {
   pattern = languages,
@@ -34,3 +37,6 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
   end,
 })
+
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"

@@ -25,10 +25,14 @@ conform.setup({
 
     cs = { "csharpier" },
 
-    python = {
-      "ruff_fix",
-      "ruff_format",
-      "ruff_organize_imports",
+    prisma = { "prisma_format" },
+  },
+
+  formatters = {
+    prisma_format = {
+      command = require("conform.util").from_node_modules("prisma"),
+      args = { "format", "--schema", "$FILENAME" },
+      stdin = false,
     },
   },
 

@@ -5,12 +5,12 @@ return {
     lazy = false,
     build = ":TSUpdate"
   },
-
   -- Color scheme
   {
     "rose-pine/neovim",
     name = "rose-pine",
-  }, -- Navigation
+  },
+  -- Navigation
   {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
@@ -122,4 +122,14 @@ return {
       require("lang").setup()
     end,
   },
+  {
+    "ThePrimeagen/99",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
+  {
+    "kevinhwang91/nvim-ufo",
+    dependencies = {
+      "kevinhwang91/promise-async",
+    },
+  }
 }

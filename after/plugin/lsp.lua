@@ -17,6 +17,7 @@ local servers = {
   "ruff",
   "tailwindcss",
   "ts_ls",
+  "prismals",
 }
 
 local tools = vim.list_extend(vim.deepcopy(servers), {
@@ -52,6 +53,22 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, vim.tbl_extend("force", opts, {
       desc = "Code action",
     }))
+
+    vim.keymap.set("n", "<leader>d", vim.lsp.buf.definition, vim.tbl_extend("force", opts, {
+      desc = "Go to definition",
+    }))
+
+    vim.keymap.set("n", "<leader>D", vim.lsp.buf.references, vim.tbl_extend("force", opts, {
+      desc = "References",
+    }))
+
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, vim.tbl_extend("force", opts, {
+      desc = "Hover",
+    }))
+
+    vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, vim.tbl_extend("force", opts, {
+      desc = "Rename",
+    }))
   end,
 })
 
@@ -71,6 +88,12 @@ vim.lsp.config("lua_ls", {
         globals = { "vim" },
       },
     },
+  },
+})
+
+vim.filetype.add({
+  extension = {
+    pyj = "python",
   },
 })
 
