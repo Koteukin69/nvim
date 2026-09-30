@@ -131,5 +131,10 @@ return {
     dependencies = {
       "kevinhwang91/promise-async",
     },
-  }
+  },
+  {
+    "wansmer/treesj",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+  },
+  "ThePrimeagen/vim-be-good"
 }

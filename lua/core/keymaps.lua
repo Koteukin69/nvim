@@ -6,3 +6,6 @@ vim.keymap.set("n", "<M-k>", "<cmd>m .-2<cr>==", { desc = "Move line up" })
 
 vim.keymap.set("v", "<M-j>", ":m '>+1<cr>gv=gv", { desc = "Move selection down" })
 vim.keymap.set("v", "<M-k>", ":m '<-2<cr>gv=gv", { desc = "Move selection up" })
+
+vim.keymap.set("n", "<leader>q", "<cmd>%bw! | doautocmd VimEnter<CR>")
+vim.keymap.set("n", "<F1>", "<Nop>")
